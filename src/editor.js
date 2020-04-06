@@ -10,7 +10,7 @@ const HTML = `
         body { overflow-y: hidden; -webkit-overflow-scrolling: touch;height: 100%;background-color: #FFF;}
         img {max-width: 98%;margin-left:auto;margin-right:auto;display: block;}
         .content {  font-family: Arial, Helvetica, sans-serif;color: #000033; width: 100%;height: 100%;-webkit-overflow-scrolling: touch;padding-left: 0;padding-right: 0;}
-        .pell { height: 100%;}
+        .pell { height: 500px}
         .pell-content { outline: 0; overflow-y: auto;padding: 10px;height: 100%;}
         table {width: 100% !important;}
         table td {width: inherit;}
