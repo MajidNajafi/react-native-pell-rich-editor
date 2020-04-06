@@ -28,7 +28,7 @@ export default class RichTextEditor extends Component {
         this.selectionChangeListeners = [];
         this.state = {
             keyboardHeight: 0,
-            height: 0,
+            height: Dimensions.get("window").height,
         };
         this.focusListeners = [];
     }
