@@ -28,7 +28,7 @@ export default class RichTextEditor extends Component {
         this.selectionChangeListeners = [];
         this.state = {
             keyboardHeight: 0,
-            height: 100,
+            height: 0,
         };
         this.focusListeners = [];
     }
@@ -61,7 +61,7 @@ export default class RichTextEditor extends Component {
         if (newKeyboardHeight) {
             this.setEditorAvailableHeightBasedOnKeyboardHeight(newKeyboardHeight);
         }
-        this.setState({keyboardHeight: 0});
+        this.setState({keyboardHeight: newKeyboardHeight});
     }
 
     _onKeyboardWillHide(event) {
@@ -152,7 +152,7 @@ export default class RichTextEditor extends Component {
     );
 
     render() {
-        let {height} = Dimensions.get('window').height;
+        let {height} = this.state;
 
         // useContainer is an optional prop with default value of true
         // If set to true, it will use a View wrapper with styles and height.
@@ -161,7 +161,7 @@ export default class RichTextEditor extends Component {
 
         if (useContainer) {
             return (
-                <View style={[this.props.style, {height: Dimensions.get('window').height, backgroundColor:"red"}]}>
+                <View style={[this.props.style, {height: height || Dimensions.get('window').height * 0.7}]}>
                     {this.renderWebView()}
                 </View>
             );
