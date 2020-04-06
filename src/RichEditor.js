@@ -22,8 +22,8 @@ export default class RichTextEditor extends Component {
         this.onMessage = this.onMessage.bind(this);
         this._sendAction = this._sendAction.bind(this);
         this.registerToolbar = this.registerToolbar.bind(this);
-        this._onKeyboardWillShow = this._onKeyboardWillShow.bind(this);
-        this._onKeyboardWillHide = this._onKeyboardWillHide.bind(this);
+        // this._onKeyboardWillShow = this._onKeyboardWillShow.bind(this);
+        // this._onKeyboardWillHide = this._onKeyboardWillHide.bind(this);
         this.isInit = false;
         this.selectionChangeListeners = [];
         this.state = {
